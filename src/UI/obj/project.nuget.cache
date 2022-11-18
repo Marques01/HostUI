@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "jfP2EKOmynZZpmX4TIy3QvfaDn7oorfEM4pTLXTlDWk7xMCGuNVwd0CTaXGgHaCK8ZNQIL9IKHd7eHn0DdBSPg==",
+  "dgSpecHash": "kFrVcpcqmf0M6UHwyWrWJj7TxytOUVA5XOqPu+aOdGZYnC4D/P0MihM+8MGng2un+X9LJ+uhUFDETGstu9u8aA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cleit\\OneDrive\\Fotos e documentos\\Documentos\\Repo\\HostUI\\src\\UI\\UI.csproj",
+  "projectFilePath": "C:\\Users\\cleit\\Desktop\\HostUI\\src\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.11\\microsoft.aspnetcore.authorization.6.0.11.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.11\\microsoft.aspnetcore.components.6.0.11.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.11\\microsoft.aspnetcore.components.analyzers.6.0.11.nupkg.sha512",
-    "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.11\\microsoft.aspnetcore.components.authorization.6.0.11.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.11\\microsoft.aspnetcore.components.forms.6.0.11.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.11\\microsoft.aspnetcore.components.web.6.0.11.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.11\\microsoft.aspnetcore.components.webassembly.6.0.11.nupkg.sha512",

@@ -1,0 +1,32 @@
+﻿@inject IAccountServices _accountServices
+@page "/login"
+
+<h3>Login</h3>
+
+<EditForm Model="userDto" OnSubmit="UserLogin">
+    <label>Email</label>
+    <div class="input-group mb-3">
+        <i class="bi bi-person-circle input-group-text"></i>
+        <InputText @bind-Value="userDto.Email" class="form-control"/>        
+    </div>
+    
+    <label>Senha</label>
+    <div class="input-group mb-3">        
+        <i class="bi bi-file-lock input-group-text"></i>
+        <InputText type="password" @bind-Value="userDto.Password" class="form-control" />
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Login" />
+
+</EditForm>
+
+@code {
+    UserDto userDto = new();
+
+    UserToken userToken = new();
+
+    private async Task UserLogin()
+    {
+        userToken = await _accountServices.LoginAsync(userDto);
+    }
+}

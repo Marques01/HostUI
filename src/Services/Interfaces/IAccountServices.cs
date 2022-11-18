@@ -1,11 +1,10 @@
 ﻿using Models;
-using System.Security.Claims;
 
 namespace Services.Interfaces
 {
     public interface IAccountServices
     {
-        Task<Claim> LoginAsync(UserDto userDto);
+        Task<UserToken> LoginAsync(UserDto userDto);
 
         Task CreateAsync(UserDto userDto);
 

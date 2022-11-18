@@ -1,7 +1,7 @@
 ﻿using Models;
 using Services.Interfaces;
 using System.Net.Http.Json;
-using System.Security.Claims;
+using System.Text.Json;
 
 namespace Services
 {
@@ -14,9 +14,27 @@ namespace Services
             _client = client;
         }
 
-        public Task<Claim> LoginAsync(UserDto userDto)
+        public async Task<UserToken> LoginAsync(UserDto userDto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var userRequest = await _client.PostAsJsonAsync("api/account/login", userDto);
+
+                var userResponse = await userRequest.Content.ReadAsStringAsync();
+
+                var user = JsonSerializer.Deserialize<UserToken>(userResponse);
+
+                if (user != null)
+                    return user;
+
+                return new UserToken();
+                    
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw new Exception(ex.Message);                
+            }
         }
 
         public async Task CreateAsync(UserDto userDto)

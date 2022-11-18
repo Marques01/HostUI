@@ -1,14 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "RKgaVAEZh0oil/8Quex5Tfv19jQIjdAYbom7b3nYcGSyyBkHMBDmbG4u+KIZr5rfZOQu1deF6YOGPRPsNkztXw==",
+  "dgSpecHash": "KEqQQ+pxj4Dwy9HqCEix43P34/8YbGrn5CuKwOefTV9LlcRU2xuEH4Ce4uwzVLExJwRccLMghQNGkBnXMJ+W7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cleit\\OneDrive\\Fotos e documentos\\Documentos\\Repo\\HostUI\\src\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\cleit\\Desktop\\HostUI\\src\\Services\\Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.11\\microsoft.aspnetcore.authorization.6.0.11.nupkg.sha512",
-    "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.11\\microsoft.aspnetcore.components.6.0.11.nupkg.sha512",
-    "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.11\\microsoft.aspnetcore.components.analyzers.6.0.11.nupkg.sha512",
-    "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.11\\microsoft.aspnetcore.components.authorization.6.0.11.nupkg.sha512",
-    "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.11\\microsoft.aspnetcore.metadata.6.0.11.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\microsoft.extensions.http.7.0.0.nupkg.sha512",
