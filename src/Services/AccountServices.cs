@@ -21,11 +21,14 @@ namespace Services
                 var userRequest = await _client.PostAsJsonAsync("api/account/login", userDto);
 
                 var userResponse = await userRequest.Content.ReadAsStringAsync();
+                
+                if (!string.IsNullOrEmpty(userResponse))
+                {
+                    var user = JsonSerializer.Deserialize<UserToken>(userResponse);
 
-                var user = JsonSerializer.Deserialize<UserToken>(userResponse);
-
-                if (user != null)
-                    return user;
+                    if (user != null)
+                        return user;
+                }   
 
                 return new UserToken();
                     

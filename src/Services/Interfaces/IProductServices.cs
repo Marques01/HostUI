@@ -1,8 +1,8 @@
 ﻿using Models;
 
-namespace BLL.Repository.Interfaces
+namespace Services.Interfaces
 {
-    public interface IProductRepository
+    public interface IProductServices
     {
         Task CreateAsync(Product model);
 

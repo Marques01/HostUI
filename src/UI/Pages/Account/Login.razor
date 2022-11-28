@@ -1,9 +1,24 @@
 ﻿@inject IAccountServices _accountServices
+@inject TokenAuthenticationProvider _authServices
+@inject NavigationManager _navigationManager
+
 @page "/login"
 
 <h3>Login</h3>
 
-<EditForm Model="userDto" OnSubmit="UserLogin">
+<EditForm Model="userDto" OnSubmit="UserLogin"> 
+
+    @if (loginInvalido)
+    {
+        <_Alert >            
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
+                Login inválido
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </_Alert>       
+    }
+
     <label>Email</label>
     <div class="input-group mb-3">
         <i class="bi bi-person-circle input-group-text"></i>
@@ -16,6 +31,7 @@
         <InputText type="password" @bind-Value="userDto.Password" class="form-control" />
     </div>
 
+    <!-- Button trigger modal -->
     <input type="submit" class="btn btn-primary" value="Login" />
 
 </EditForm>
@@ -23,10 +39,28 @@
 @code {
     UserDto userDto = new();
 
-    UserToken userToken = new();
+    UserToken userToken = new();    
+
+    bool loginInvalido = false;
 
     private async Task UserLogin()
     {
         userToken = await _accountServices.LoginAsync(userDto);
+
+        await VerificaLogin();        
+    }    
+
+    async Task VerificaLogin()
+    {
+        if (string.IsNullOrEmpty(userToken.Token))
+        {
+            loginInvalido = true;
+        }        
+        else
+        {
+            await _authServices.Login(userToken.Token);
+
+            _navigationManager.NavigateTo("/capacity/index");
+        }
     }
 }

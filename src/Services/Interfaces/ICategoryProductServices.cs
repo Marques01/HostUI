@@ -1,8 +1,8 @@
 ﻿using Models;
 
-namespace BLL.Repository.Interfaces
+namespace Services.Interfaces
 {
-    public interface ICategoryProductRepository
+    public interface ICategoryProductServices
     {
         Task<IEnumerable<CategoryProduct>> GetProductsByCategory(int categoryId);
     }

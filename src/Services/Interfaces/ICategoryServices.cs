@@ -1,8 +1,8 @@
 ﻿using Models;
 
-namespace BLL.Repository.Interfaces
+namespace Services.Interfaces
 {
-    public interface ICategoryRepository
+    public interface ICategoryServices
     {
         Task Create(Category category);
 

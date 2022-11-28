@@ -1,8 +1,8 @@
 ﻿using Models;
 
-namespace BLL.Repository.Interfaces
+namespace Services.Interfaces
 {
-    public interface IGameRepository
+    public interface IGameServices
     {
         Task CreateAsync(Game game);
 

@@ -1,8 +1,8 @@
 ﻿using Models;
 
-namespace BLL.Repository.Interfaces
+namespace Services.Interfaces
 {
-    public interface ICapacityRepository
+    public interface ICapacityServices
     {
         Task CreateAsync(Capacity capacity);
 

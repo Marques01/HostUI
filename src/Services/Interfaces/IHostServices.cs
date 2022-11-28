@@ -1,8 +1,8 @@
 ﻿using Models;
 
-namespace BLL.Repository.Interfaces
+namespace Services.Interfaces
 {
-    public interface IHostRepository
+    public interface IHostServices
     {
         Task<Host> GetByIdAsync(int id);
 
