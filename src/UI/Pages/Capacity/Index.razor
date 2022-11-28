@@ -3,7 +3,10 @@
 
 <AuthorizeView Roles="Admin">
     <Authorized>
-        <p>S</p>
+        @foreach (var item in Capacities)
+        {
+            <p>@item.Slots</p>
+        }
     </Authorized>
     <NotAuthorized>
         <div class="alert alert-danger" role="alert">
@@ -22,7 +25,7 @@
 
         try
         {
-            //Capacities = await _capacityServices.GetAllCapacitiesAsync();
+            Capacities = await _capacityServices.GetAllCapacitiesAsync();
         }
         catch (Exception ex)
         {   
